@@ -11,3 +11,7 @@ pretrained_models: This folder includes open-source models found that may be ues
 Link to Pyradon paper: https://iopscience.iop.org/article/10.3847/1538-3881/aaddff/pdf
 
 Currently experimenting with Pyradon. This model is built to identify patterns in very noisy images, which is similar to our application. 
+
+Instructions for use:
+1. Install Anaconda: https://www.anaconda.com/download
+2. Create and activate the conda environment in your directory: https://conda.io/projects/conda/en/latest/user-guide/tasks/manag
