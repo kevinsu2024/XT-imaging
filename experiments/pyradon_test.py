@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 import matplotlib.pyplot as plt
 
 # Location of image to be read 
-directory = 'images/image1.png'
+directory = 'images/image2.png'
 # Image to be analyzed
 img = cv.imread(directory, cv.IMREAD_GRAYSCALE)
 img = cv.resize(img, (512,512), interpolation=cv.INTER_AREA)
@@ -34,7 +34,7 @@ s.finder.pars.use_show = False #flip to true if you want to see how the streaks 
 
 for i in range(transformed_img.shape[0]): 
     s.finder.input(transformed_img[i,:,:], psf=0, variance=0) # note the psf is given as width sigma, and variance of the noise we used. 
-    print(f'Frame= {i} | Best S/N= {s.finder.data.best_snr}')
+    # print(f'Frame= {i} | Best S/N= {s.finder.data.best_snr}')
 
 plt.figure()
 plt.imshow(img)
@@ -45,6 +45,7 @@ for i in range(len(s.finder.streaks_all)):
     offset = 1
     plt.plot([streak.x1-offset, streak.x2-offset], [streak.y1,streak.y2], lw=1, ls='--', color='red')
     plt.plot([streak.x1+offset, streak.x2+offset], [streak.y1,streak.y2], lw=1, ls='--', color='red')
+plt.title('Streak detection in confocal image')
 plt.style.use('grayscale')
 plt.colorbar()
 plt.show()

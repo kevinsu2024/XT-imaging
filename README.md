@@ -3,7 +3,7 @@ This is the repository for all code developed for the XT-imaging task, part of F
 Currently, we are working on blood streak detection for calculated XT images.
 
 **Files**
-experiments: This folder includes experiments with the Canny edge detection method on images, testing its ability to identify streaks, as well as tests to the Pyradon library
+experiments: This folder includes experiments with the FRT model from guynir42.
 
 pretrained_models: This folder includes open-source models found that may be uesful in identifying streaks
 - LSWMS: This model uses the weighted mean-squares algorithm to identify lines, on top of Hough transform. 
